@@ -286,33 +286,10 @@ Authorization: Bearer TOKEN
 * Verify username/password in `db.go`
 
 ---
-
-## 📦 Optional Improvements
-
-* 🔄 Refresh Tokens
-* 🐳 Docker (docker-compose)
-* 🧪 Unit Testing
-* 🧑‍💻 Signup Feature
-* 📊 Better Dashboard UI
-
----
-
-## 🎯 Submission Checklist
-
-* [x] Backend working
-* [x] Frontend working
-* [x] JWT Authentication implemented
-* [x] RBAC enforced (Admin, Editor, Viewer)
-* [x] Protected routes working
-* [x] Admin panel restricted
-* [x] Content permissions working
-* [x] README added
-* [x] GitHub repository ready
-
 ---
 
 ## 👨‍💻 Author
 
-RBAC System Project (React + Golang)
+Mayur Borse
 
 ---
