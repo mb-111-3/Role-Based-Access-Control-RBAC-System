@@ -213,16 +213,16 @@ Reset containers
 ```bash
 docker-compose down -v
 ```
-
+---
 ## Security
-Password hashing using bcrypt
-JWT authentication
-Role-based middleware protection
+- Password hashing using bcrypt
+- JWT authentication
+- Role-based middleware protection
 
 ## Bonus Implemented
-Dockerized application
-Seeded database
-RBAC middleware
-
+- Dockerized application
+- Seeded database
+- RBAC middleware
+---
 ## Author
 ~ Mayur Borse
