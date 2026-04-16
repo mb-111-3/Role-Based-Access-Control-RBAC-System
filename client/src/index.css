@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Figtree', sans-serif;
+  background-color: #080B14;
+  color: #E2E8F0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0D1117; }
+::-webkit-scrollbar-thumb { background: #2D3A54; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #6366F1; }
+
+/* Glass card */
+.glass {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(99, 102, 241, 0.12);
+}
+
+/* Glow */
+.glow-accent { box-shadow: 0 0 24px rgba(99, 102, 241, 0.25); }
+.glow-teal   { box-shadow: 0 0 24px rgba(20, 184, 166, 0.2); }
+
+/* Gradient text */
+.grad-text {
+  background: linear-gradient(135deg, #818CF8 0%, #14B8A6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Input focus ring */
+.input-field {
+  @apply w-full bg-surface-800 border border-surface-500 rounded-xl px-4 py-3 text-slate-200 text-sm
+         placeholder-slate-500 outline-none transition-all duration-200;
+}
+.input-field:focus {
+  border-color: #6366F1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* Btn primary */
+.btn-primary {
+  @apply w-full py-3 px-6 rounded-xl font-display font-semibold text-sm text-white transition-all duration-200;
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+}
+.btn-primary:hover  { filter: brightness(1.1); transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); filter: brightness(0.95); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+/* Sidebar nav link */
+.nav-link {
+  @apply flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-body font-medium
+         text-slate-400 transition-all duration-150 cursor-pointer;
+}
+.nav-link:hover  { background: rgba(99,102,241,0.08); color: #C7D2FE; }
+.nav-link.active { background: rgba(99,102,241,0.15); color: #818CF8; }
+
+/* Badge */
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold font-display;
+}
