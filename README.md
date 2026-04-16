@@ -41,7 +41,7 @@ The system manages users and content with role-based permissions.
 ---
 
 ## Project Structure
-
+```text
 client/
 ├── index.html               ← root of client folder
 ├── package.json             ← root of client folder
@@ -90,14 +90,12 @@ server/
     └── routes.go             ← Wires all routes + middleware to handlers
 
 docker-compose.yml
+```
 ---
-
 ## Database Setup (MySQL)
-
 Database Name: `rbac`
 
 ### Seed Users
-
 | Role   | Username | Password   |
 |--------|----------|-----------|
 | Admin  | admin    | admin123  |
@@ -105,13 +103,13 @@ Database Name: `rbac`
 | Viewer | viewer   | viewer123 |
 
 ---
-
 ## Frontend Setup (Without Docker)
 
 ```bash
 cd client
 npm install
 npm run dev
+```
 
 ## Backend Setup (Without Docker)
 
@@ -119,7 +117,7 @@ npm run dev
 cd server
 go mod tidy
 go run main.go
-
+```
 
 ## Docker Setup (Recommended)
 1. Start Docker
@@ -128,16 +126,16 @@ Make sure Docker Desktop is running.
 2. Run Project
 ```bash
 docker-compose up --build
-
+```
 3. Stop Project
 ```bash
 docker-compose down
-
+```
 4. Reset Everything (if error)
 ```bash
 docker-compose down -v
 docker-compose up --build
-
+```
 ---
 Docker Configuration
 docker-compose.yml
@@ -181,26 +179,22 @@ services:
 
 volumes:
   mysql_data:
-
+```
 ---
-
 ## Access URLs
-```bash
 | Service  | URL                                            |
 | -------- | ---------------------------------------------- |
 | Frontend | [http://localhost:5173](http://localhost:5173) |
 | Backend  | [http://localhost:8080](http://localhost:8080) |
 | MySQL    | localhost:3307                                 |
 
-
 ## Database Access Using Docker CLI
 ```bash
 docker exec -it rbac-mysql mysql -u rbac_user -p
-
+```
 Password: rbac_pass
 
 ---
-
 ## API Endpoints
 | Method | Endpoint         | Description            |
 | ------ | ---------------- | ---------------------- |
@@ -210,16 +204,15 @@ Password: rbac_pass
 | GET    | /api/content     | View content           |
 | DELETE | /api/content/:id | Delete content (Admin) |
 
-
 ## Common Errors & Fixes
 MySQL container not running
 ```bash
 docker logs rbac-mysql
-
+```
 Reset containers
 ```bash
 docker-compose down -v
-
+```
 
 ## Security
 Password hashing using bcrypt
@@ -230,3 +223,6 @@ Role-based middleware protection
 Dockerized application
 Seeded database
 RBAC middleware
+
+## Author
+~ Mayur Borse
